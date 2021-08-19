@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(https://www.prasadi.edu.np/wp-content/uploads/2017/04/beyond_the_classroom.jpg);
+    font-family: "Roboto", sans-serif;
+}
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #041b40;
+    color: aliceblue;
+}
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+    background-color: #041b40;
+}
+
+nav a {
+    display: block;
+    padding: 14px 25px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 32px;
+}
+
+nav ul li ul li:hover {
+    background: #020d1e;
+}
+
+.icon {
+    float: right;
+}
+
+.toggle p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.toggle i {
+    float: right;
+    right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+nav a:hover {
+    background: #020d1e;
+    color: #fff;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+
+@media all and (max-width:768px) {
+    nav {
+        margin: 0;
+        height: 35px;
+        text-align: center;
+    }
+    .toggle+a,
+    .nav {
+        display: none;
+    }
+    .toggle {
+        display: block;
+        background-color: #041b40;
+        padding: 14px 20px;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+    }
+    .toggle:hover {
+        background-color: #020d1e;
+    }
+    [id^=drop]:checked+ul {
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: #020d1e;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #fff;
+        font-size: 14px;
+    }
+    nav ul li li .toggle,
+    nav ul ul a {
+        background-color: #073986;
+    }
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #fff;
+    }
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+}
+
+@media all and (max-width:330px) {
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+}
